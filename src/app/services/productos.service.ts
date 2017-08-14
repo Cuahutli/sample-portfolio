@@ -9,6 +9,10 @@ export class ProductosService {
       this.cargar_productos();
   }
 
+  public cargar_producto( cod:String ){
+    return this.http.get(`https://paginaweb-efa39.firebaseio.com/productos/${ cod }.json`);
+  }
+
   public cargar_productos(){
       this.cargando_productos = true;
       this.http.get('https://paginaweb-efa39.firebaseio.com/productos_idx.json')
