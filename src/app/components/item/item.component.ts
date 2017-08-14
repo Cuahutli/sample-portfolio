@@ -11,7 +11,7 @@ export class ItemComponent {
   producto:any = undefined;
   cod:String = undefined;
   constructor  ( private route:ActivatedRoute,
-                 private _ps:ProductosService) {
+                 public _ps:ProductosService) {
     route.params.subscribe( parametros=>{
       //console.log(parametros);
       //console.log(parametros["id"]);
