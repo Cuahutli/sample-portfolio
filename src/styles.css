@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* animaciones */
 .animated {
-  animation-duration: 1.3s;
+  animation-duration: 2s;
   animation-fill-mode: both;
 }
 
