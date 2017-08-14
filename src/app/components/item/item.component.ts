@@ -9,6 +9,7 @@ import { ProductosService } from "../../services/productos.service";
 })
 export class ItemComponent {
   producto:any = undefined;
+  cod:String = undefined;
   constructor  ( private route:ActivatedRoute,
                  private _ps:ProductosService) {
     route.params.subscribe( parametros=>{
@@ -16,6 +17,7 @@ export class ItemComponent {
       //console.log(parametros["id"]);
       _ps.cargar_producto(parametros["id"])
           .subscribe( res =>{
+              this.cod = parametros["id"];
               this.producto = res.json();
               console.log( this.producto )
           });
